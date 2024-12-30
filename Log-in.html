@@ -19,7 +19,7 @@
         display: flex;
         flex-direction: column;
         width: 40%;
-        height: 65vh;
+        height: 50%;
         align-items: center;
         font-family: arial;
         padding-top: 20px;
@@ -76,10 +76,8 @@
   <body>
     <h1>Form Validation</h1>
     <form onsubmit="return back()">
-      <label for="">Name : </label>
       <input id="name" type="text" />
       <span id="a1"></span>
-      <label for="">Number : </label>
       <input id="number" type="number" />
       <span id="a2"></span>
       <input id="btn" type="submit" />
@@ -114,7 +112,6 @@
         alert("form submitted");
         localStorage.setItem("Name", name);
         localStorage.setItem("Number", number);
-        localStorage.setItem("E-Mail", mail);
         return true;
       }
     </script>
