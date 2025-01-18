@@ -4,7 +4,7 @@
 }
 #header {
   width: 100%;
-  height: auto;
+  height: 6vh;
   background-color: #000957;
   color: white;
   text-align: center;
@@ -15,7 +15,7 @@
 }
 #header2 {
   width: 100%;
-  height: auto;
+  height: 12vh;
   background-color: #344cb7;
   color: white;
   display: flex;
@@ -50,4 +50,62 @@
 #name {
   width: 100%;
   height: auto;
+}
+#main {
+  height: 18vh;
+  text-align: center;
+  background-color: #000957;
+  color: white;
+}
+#main input {
+  width: 6em;
+  height: 6em;
+  border-radius: 10em;
+}
+#main button {
+  width: 6em;
+  height: 6em;
+  border-radius: 10em;
+}
+#play-ground {
+  background-color: #ffeb00;
+  height: 64vh;
+  width: 100%;
+  position: relative;
+}
+#vs {
+  position: absolute;
+  top: 38%;
+  left: 45%;
+  width: 10%;
+  height: 24%;
+}
+#human {
+  position: absolute;
+  top: 20%;
+  height: 70%;
+  width: 20%;
+  left: 5%;
+}
+#panda {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  height: 80%;
+  width: 35%;
+}
+#rem {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: 20%;
+  top: 80%;
+  left: 40%;
+}
+#ans {
+  position: absolute;
+  top: 25%;
+  left: 45%;
 }
