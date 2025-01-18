@@ -58,3 +58,12 @@ function back() {
     document.getElementById("Number").value = null;
   }
 }
+function start() {
+  var speech = new SpeechSynthesisUtterance();
+  var content = "Lets Start the Game now";
+  speech.text = content;
+  speech.rate = 1.1;
+  speech.volume = 1;
+  speech.pitch = 10;
+  window.speechSynthesis.speak(speech);
+}

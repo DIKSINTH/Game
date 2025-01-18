@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="Guess10.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
   </head>
   <body>
     <!DOCTYPE html>
@@ -14,8 +18,20 @@
         <title>Document</title>
       </head>
       <body>
-        <div>
-          <h1>Guess the Number from 1 to 10</h1>
+<div id="header"><h1>Guess the Number</h1></div>
+<div id="header2"> <div id="Rules">
+            <h3>Rules : </h3>
+              <ul><li>Enter your Name and Play</li>
+              <li>Enter the Number between 1 to 10</li>
+            <li>Guess the Number between 1 to 10</li></ul>
+          </div>
+          <div id="Name">
+            <label for="player-name">Name</label><input id="player-name"
+            type="text"
+            placeholder="Enter your Name"
+          /></div><div id="btn"><button id="Enter" onclick="start()">Enter</button></div></div>
+         
+          
           <input type="number" id="Number" /><button onclick="back()">
             Check
           </button>
