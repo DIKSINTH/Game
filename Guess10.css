@@ -26,22 +26,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1em;
+  font-family: "Jaro", serif;
+  font-size: 2em;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: bold;
 }
 #player-name {
-  margin-top: 0.5em;
   width: 20em;
   height: 3em;
   border-radius: 1em;
+  padding-left: 1em;
+  border: 0px solid rgb(255, 255, 255);
+}
+#player-name:hover {
+  background-color: rgb(175, 167, 167);
 }
 #Enter {
+  font-family: "Roboto", sans-serif;
   width: 7em;
   height: 3em;
   border-radius: 1em;
+  border: 0px solid white;
+  background-color: #ffeb00;
 }
 #btn {
-  margin-top: 2.7em;
-  margin-left: 0.5em;
+  margin-top: 2.5em;
+  margin-left: 0.3em;
+}
+#Enter:hover {
+  background-color: rgb(255, 255, 255);
 }
 #Rules {
   padding-left: 2em;
@@ -56,22 +70,26 @@
   text-align: center;
   background-color: #000957;
   color: white;
+  font-family: "Roboto", sans-serif;
 }
 #main input {
-  width: 6em;
-  height: 6em;
-  border-radius: 10em;
+  width: 80px;
+  height: 80px;
+  border-radius: 160px;
 }
 #main button {
   width: 6em;
   height: 6em;
+  margin-left: 1em;
   border-radius: 10em;
+  font-family: "Roboto", sans-serif;
 }
 #play-ground {
   background-color: #ffeb00;
   height: 64vh;
   width: 100%;
   position: relative;
+  font-family: "Roboto", sans-serif;
 }
 #vs {
   position: absolute;
@@ -82,14 +100,14 @@
 }
 #human {
   position: absolute;
-  top: 20%;
+  top: 10%;
   height: 70%;
   width: 20%;
   left: 5%;
 }
 #panda {
   position: absolute;
-  top: 20%;
+  top: 10%;
   right: 5%;
   height: 80%;
   width: 35%;
@@ -106,6 +124,36 @@
 }
 #ans {
   position: absolute;
-  top: 25%;
-  left: 45%;
+  top: 10%;
+  width: 20%;
+  height: 10%;
+  left: 43%;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2em;
+  color: rgb(255, 48, 48);
+  font-weight: bold;
+}
+#player {
+  position: absolute;
+  left: 10%;
+  top: 3%;
+}
+#player-panda {
+  top: 3%;
+  position: absolute;
+  right: 19%;
+}
+#player-number {
+  position: absolute;
+  left: 30%;
+  top: 45%;
+}
+#panda-number {
+  position: absolute;
+  right: 35%;
+  top: 45%;
+}
+#Num {
+  font-size: 30px;
+  padding-left: 1em;
 }

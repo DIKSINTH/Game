@@ -1,52 +1,91 @@
 var remaining_chances = 10;
 var speech = new SpeechSynthesisUtterance();
+let Name = document.getElementById("player").textContent;
 function back() {
-  var random_number = Math.ceil(Math.random() * 10);
-  var player_Number = parseInt(document.getElementById("Number").value);
-  if (document.getElementById("Number").value == "") {
-    document.getElementById("Answer").innerHTML = "Enter the Number";
-
-    const condition = true;
-    // Check the condition
-    if (condition) {
-      const message = document.getElementById("Answer");
-      // Show the element
+  var panda_number = Math.ceil(Math.random() * 10);
+  var player_Number = parseInt(document.getElementById("Num").value);
+  document.getElementById("player-number").innerHTML = player_Number;
+  document.getElementById("panda-number").innerHTML = panda_number;
+  if (document.getElementById("Num").value == "") {
+    document.getElementById("ans").innerHTML = "Enter the Number!";
+    if (true) {
+      const message = document.getElementById("ans");
       message.style.display = "block";
-      // Hide the element after 5 seconds
       setTimeout(() => {
         message.style.display = "none";
-      }, 1500); // Time in milliseconds
+      }, 2000);
     }
-    var content = document.getElementById("Answer").textContent;
+    var content = document.getElementById("ans").textContent;
     speech.text = content;
     speech.rate = 1.1;
     speech.volume = 1;
     speech.pitch = 10;
     window.speechSynthesis.speak(speech);
   } else if (remaining_chances < 1) {
-    alert("Game Over You're lost");
-    location.reload();
-  } else if (player_Number > 10 || player_Number < 1) {
-    document.getElementById("Answer").innerHTML =
-      "Enter the Number between 1 to 10";
-    const condition = true;
-    if (condition) {
-      const message = document.getElementById("Answer");
+    document.getElementById("ans").innerHTML = "Game over";
+    if (true) {
+      const message = document.getElementById("ans");
       message.style.display = "block";
       setTimeout(() => {
         message.style.display = "none";
-      }, 1000);
+      }, 5000);
     }
-  } else if (player_Number == random_number) {
-    alert("Correct Answer! Player Wins");
-    location.reload();
-  } else if (player_Number != random_number) {
+    const failSound = new Audio("fail.mp3");
+    failSound.play();
+    document.getElementById("player").style.display = "none";
+    document.getElementById("player-number").style.display = "none";
+    document.getElementById("panda-number").style.display = "none";
+    document.getElementById("vs").style.display = "none";
+    document.getElementById("human").style.display = "none";
+    document.getElementById("player-panda").innerHTML = "Panda Won🥳";
+    document.getElementById("player-panda").style.color = "#000957";
+    document.getElementById("human").style.display = "none";
+    document.getElementById("rem").style.display = "none";
+    document.getElementById("remaining").style.display = "none";
+  } else if (player_Number > 10 || player_Number < 1) {
+    document.getElementById("ans").innerHTML =
+      "Enter the Number between 1 to 10";
+    var content = document.getElementById("ans").textContent;
+    speech.text = content;
+    speech.rate = 1.1;
+    speech.volume = 1;
+    speech.pitch = 10;
+    window.speechSynthesis.speak(speech);
+    if (true) {
+      const message = document.getElementById("ans");
+      message.style.display = "block";
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 3000);
+    }
+  } else if (player_Number == panda_number) {
+    const winSound = new Audio("win.mp3");
+    winSound.play();
+    document.getElementById("ans").innerHTML = "Congratulations🥳";
+    document.getElementById("player-panda").style.display = "none";
+    document.getElementById("player-number").style.display = "none";
+    document.getElementById("panda-number").style.display = "none";
+    document.getElementById("vs").style.display = "none";
+    document.getElementById("panda").style.display = "none";
+    document.getElementById("player").innerHTML = Name + " Won🥳";
+    document.getElementById("player").style.color = "#000957";
+    document.getElementById("panda").style.display = "none";
+    document.getElementById("rem").style.display = "none";
+    document.getElementById("remaining").style.display = "none";
+    if (true) {
+      const message = document.getElementById("ans");
+      message.style.display = "block";
+      setTimeout(() => {
+        message.style.display = "none";
+      }, 5000);
+    }
+  } else if (player_Number != panda_number) {
     remaining_chances -= 1;
-    document.getElementById("Answer").innerHTML = "Wrong Answer!";
+    document.getElementById("ans").innerHTML = "Wrong Answer!";
     const condition = true;
     // Check the condition
     if (condition) {
-      const message = document.getElementById("Answer");
+      const message = document.getElementById("ans");
       // Show the element
       message.style.display = "block";
       // Hide the element after 5 seconds
@@ -54,16 +93,55 @@ function back() {
         message.style.display = "none";
       }, 1200); // Time in milliseconds
     }
+    var content = document.getElementById("ans").textContent;
+    speech.text = content;
+    speech.rate = 1.1;
+    speech.volume = 1;
+    speech.pitch = 10;
+    window.speechSynthesis.speak(speech);
     document.getElementById("remaining").innerHTML = remaining_chances;
-    document.getElementById("Number").value = null;
+    document.getElementById("Num").value = null;
+  }
+}
+
+class player {
+  constructor(Name) {
+    this.Name = Name;
+  }
+  displayplayer() {
+    document.getElementById("player").innerHTML = this.Name;
   }
 }
 function start() {
-  var speech = new SpeechSynthesisUtterance();
-  var content = "Lets Start the Game now";
-  speech.text = content;
-  speech.rate = 1.1;
-  speech.volume = 1;
-  speech.pitch = 10;
-  window.speechSynthesis.speak(speech);
+  var Name = document.getElementById("player-name").value;
+  let Adaikala = "Adaikala";
+  let Shiny = "Shiny";
+  let adaikala = "adaikala";
+  let shiny = "shiny";
+  if (
+    Name.includes(Adaikala) ||
+    Name.includes(Shiny) ||
+    Name.includes(adaikala) ||
+    Name.includes(shiny)
+  ) {
+    var speech = new SpeechSynthesisUtterance();
+    var content = "Oi Poona Kutttttti";
+    speech.text = content;
+    speech.rate = 0.8;
+    speech.volume = 10;
+    speech.pitch = 10;
+    window.speechSynthesis.speak(speech);
+    const user = new player(Name);
+    user.displayplayer();
+  } else {
+    const user = new player(Name);
+    user.displayplayer();
+    var speech = new SpeechSynthesisUtterance();
+    var content = "Welcome you" + Name;
+    speech.text = content;
+    speech.rate = 0.8;
+    speech.volume = 10;
+    speech.pitch = 10;
+    window.speechSynthesis.speak(speech);
+  }
 }
