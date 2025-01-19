@@ -41,6 +41,7 @@ function back() {
     document.getElementById("player-panda").style.color = "#000957";
     document.getElementById("human").style.display = "none";
     document.getElementById("rem").style.display = "none";
+    document.getElementById("shine").style.display = "none";
     document.getElementById("remaining").style.display = "none";
   } else if (player_Number > 10 || player_Number < 1) {
     document.getElementById("ans").innerHTML =
@@ -59,25 +60,53 @@ function back() {
       }, 3000);
     }
   } else if (player_Number == panda_number) {
-    const winSound = new Audio("win.mp3");
-    winSound.play();
-    document.getElementById("ans").innerHTML = "Congratulations🥳";
-    document.getElementById("player-panda").style.display = "none";
-    document.getElementById("player-number").style.display = "none";
-    document.getElementById("panda-number").style.display = "none";
-    document.getElementById("vs").style.display = "none";
-    document.getElementById("panda").style.display = "none";
-    document.getElementById("player").innerHTML = Name + " Won🥳";
-    document.getElementById("player").style.color = "#000957";
-    document.getElementById("panda").style.display = "none";
-    document.getElementById("rem").style.display = "none";
-    document.getElementById("remaining").style.display = "none";
-    if (true) {
-      const message = document.getElementById("ans");
-      message.style.display = "block";
-      setTimeout(() => {
-        message.style.display = "none";
-      }, 5000);
+    if (
+      Name.includes("Adaikala") ||
+      Name.includes("Shiny") ||
+      Name.includes("adaikala") ||
+      Name.includes("shiny")
+    ) {
+      const winSound = new Audio("minnale.mp3");
+      winSound.play();
+      document.getElementById("ans").innerHTML = "Congratulations🥳";
+      document.getElementById("player-panda").style.display = "none";
+      document.getElementById("player-number").style.display = "none";
+      document.getElementById("panda-number").style.display = "none";
+      document.getElementById("vs").style.display = "none";
+      document.getElementById("panda").style.display = "none";
+      document.getElementById("player").innerHTML = Name + " Won🥳";
+      document.getElementById("player").style.color = "#000957";
+      document.getElementById("panda").style.display = "none";
+      document.getElementById("rem").style.display = "none";
+      document.getElementById("remaining").style.display = "none";
+      if (true) {
+        const message = document.getElementById("ans");
+        message.style.display = "block";
+        setTimeout(() => {
+          message.style.display = "none";
+        }, 5000);
+      }
+    } else {
+      const winSound = new Audio("win.mp3");
+      winSound.play();
+      document.getElementById("ans").innerHTML = "Congratulations🥳";
+      document.getElementById("player-panda").style.display = "none";
+      document.getElementById("player-number").style.display = "none";
+      document.getElementById("panda-number").style.display = "none";
+      document.getElementById("vs").style.display = "none";
+      document.getElementById("panda").style.display = "none";
+      document.getElementById("player").innerHTML = Name + " Won🥳";
+      document.getElementById("player").style.color = "#000957";
+      document.getElementById("panda").style.display = "none";
+      document.getElementById("rem").style.display = "none";
+      document.getElementById("remaining").style.display = "none";
+      if (true) {
+        const message = document.getElementById("ans");
+        message.style.display = "block";
+        setTimeout(() => {
+          message.style.display = "none";
+        }, 5000);
+      }
     }
   } else if (player_Number != panda_number) {
     remaining_chances -= 1;
@@ -109,6 +138,16 @@ class player {
     this.Name = Name;
   }
   displayplayer() {
+    if (
+      this.Name.includes("Adaikala") ||
+      this.Name.includes("Shiny") ||
+      this.Name.includes("adaikala") ||
+      this.Name.includes("shiny")
+    ) {
+      document.getElementById("player").innerHTML = this.Name;
+      document.getElementById("human").style.display = "none";
+      document.getElementById("shine").style.display = "block";
+    }
     document.getElementById("player").innerHTML = this.Name;
   }
 }
@@ -125,7 +164,7 @@ function start() {
     Name.includes(shiny)
   ) {
     var speech = new SpeechSynthesisUtterance();
-    var content = "Oi Poona Kutttttti";
+    var content = "Oi minnalei";
     speech.text = content;
     speech.rate = 0.8;
     speech.volume = 10;

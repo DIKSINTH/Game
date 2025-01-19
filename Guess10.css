@@ -20,6 +20,17 @@
   color: white;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: white;
+  transition: color 1s ease;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+a:hover {
+  color: #ffeb00;
 }
 #Name {
   margin-left: 50%;
@@ -50,16 +61,24 @@
   border: 0px solid white;
   background-color: #ffeb00;
 }
+#shine {
+  display: none;
+  position: absolute;
+  top: 10%;
+  height: 70%;
+  width: 20%;
+  left: 5%;
+}
 #btn {
-  margin-top: 2.5em;
+  margin-top: 2.3em;
   margin-left: 0.3em;
 }
 #Enter:hover {
   background-color: rgb(255, 255, 255);
 }
 #Rules {
-  padding-left: 2em;
   width: 20%;
+  padding-top: 3em;
 }
 #name {
   width: 100%;
@@ -135,7 +154,7 @@
 }
 #player {
   position: absolute;
-  left: 10%;
+  left: 11%;
   top: 3%;
 }
 #player-panda {
