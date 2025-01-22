@@ -38,6 +38,7 @@
   padding-left: 45vh;
   padding-top: 20vh;
   display: flex;
+  justify-content: center;
 }
 #rules ul {
   padding-top: 3vh;
@@ -65,4 +66,58 @@ a {
 }
 button:hover {
   background-color: white;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #desc p {
+    width: 70vw;
+  }
+  #rules {
+    color: white;
+    padding-left: 45vh;
+    padding-top: 10vh;
+    display: inline;
+    position: relative;
+  }
+  #main-rule ul {
+    width: 50vw;
+  }
+  #panda {
+    margin-right: 60vw;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  #header {
+    background-color: blueviolet;
+  }
+  #desc {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh;
+    padding-right: 15%;
+  }
+  #main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 150vh;
+    background-color: #000957;
+    font-family: "Roboto", sans-serif;
+  }
+  #rules {
+    color: white;
+    padding-top: 5vh;
+    display: flex;
+    justify-content: center;
+  }
+  #main-rule {
+    margin-right: 95vw;
+  }
+  #panda {
+    display: none;
+  }
 }

@@ -70,7 +70,7 @@ a:hover {
   left: 5%;
 }
 #btn {
-  margin-top: 2.3em;
+  margin-top: 2.5em;
   margin-left: 0.3em;
 }
 #Enter:hover {
@@ -142,7 +142,8 @@ a:hover {
   left: 40%;
 }
 #Desc {
-  padding-left: 15%;
+  padding-left: 5%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 #ans {
   position: absolute;
@@ -182,7 +183,7 @@ a:hover {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #Desc {
     padding-left: 30%;
-    background-color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
   }
   #Name {
     margin-left: 30%;
