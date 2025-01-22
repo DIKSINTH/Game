@@ -182,6 +182,7 @@ a:hover {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #Desc {
     padding-left: 30%;
+    background-color: rgb(255, 255, 255);
   }
   #Name {
     margin-left: 30%;
@@ -194,38 +195,105 @@ a:hover {
   }
   #rem {
     width: 40%;
-  }
-}
-@media screen and (min-width: 425px) and (max-width: 767px) {
-  #Desc {
-    padding-left: 60%;
-    padding-right: 10%;
-  }
-  #Name {
-    margin-left: 20%;
-  }
-
-  #shine {
-    width: 25%;
-    height: 70%;
-  }
-  #player-panda {
-    right: 17%;
-  }
-  #player {
-    left: 13%;
-  }
-  #rem {
-    width: 40%;
     left: 30%;
   }
+  #shine {
+    width: 25%;
+    left: 2%;
+  }
 }
-@media screen and (min-width: 375px) and (max-width: 424px) {
+@media screen and (min-width: 360px) and (max-width: 480px) {
   #header {
-    background-color: yellow;
+    background-color: chartreuse;
+  }
+  #player-panda {
+    right: 12%;
+    font-size: 1.5em;
+  }
+  #player {
+    left: 9%;
+    font-size: 1.5em;
   }
   #human {
+    width: 35%;
+    left: 0%;
+  }
+  #main h1 {
+    font-size: 1.4em;
+  }
+  #Desc {
+    font-size: 0.5em;
+    padding-left: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #Name {
+    margin-left: 0.1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Jaro", serif;
+    font-size: 1.75em;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: bold;
+  }
+  #player-name {
+    width: 15em;
+    height: 3em;
+    border-radius: 1em;
+    padding-left: 1em;
+    border: 0px solid rgb(255, 255, 255);
+  }
+  #Enter {
+    font-family: "Roboto", sans-serif;
+    width: 6em;
+    height: 3em;
+    border-radius: 1em;
+    border: 0px;
+    background-color: #ffeb00;
+  }
+  #btn {
+    margin-top: 2.3em;
+    margin-left: 0.3em;
+  }
+  #panda {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    height: 80%;
+    width: 45%;
+  }
+  #ans {
+    position: absolute;
+    top: 10%;
     width: 20%;
-    height: 35%;
+    height: 10%;
+    left: 43%;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 1em;
+    color: rgb(255, 48, 48);
+    font-weight: bold;
+  }
+  #shine {
+    width: 33%;
+    left: -2%;
+    height: 60%;
+  }
+  #remaining {
+    font-size: 1.5em;
+  }
+  #rem {
+    width: 50%;
+    left: 23%;
+  }
+  #rem-text {
+    font-size: 1em;
+  }
+  #vs {
+    position: absolute;
+    top: 38%;
+    left: 43%;
+    width: 12%;
+    height: 18%;
   }
 }
