@@ -76,7 +76,7 @@ a:hover {
 #Enter:hover {
   background-color: rgb(255, 255, 255);
 }
-#Rules {
+#Description {
   width: 20%;
   padding-top: 3em;
 }
@@ -180,6 +180,7 @@ a:hover {
   font-size: 30px;
   padding-left: 1em;
 }
+/*Media Query for Tablets*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #Desc {
     padding-left: 30%;
@@ -203,6 +204,7 @@ a:hover {
     left: 2%;
   }
 }
+/*Media Query for Mobile Phones*/
 @media screen and (min-width: 360px) and (max-width: 480px) {
   #header {
     background-color: chartreuse;

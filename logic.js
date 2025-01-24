@@ -4,10 +4,13 @@ let Shiny = "Shiny";
 let adaikala = "adaikala";
 let shiny = "shiny";
 let speech = new SpeechSynthesisUtterance();
+/*Player Class*/
 class player {
+  /* Contructor Method*/
   constructor(Name) {
     this.Name = Name;
   }
+  /*Display Player Details Method*/
   displayplayer() {
     if (
       this.Name.includes(Adaikala) ||
@@ -38,6 +41,7 @@ class player {
       document.getElementById("shine").style.display = "none";
     }
   }
+  /*Playing Actions*/
   play() {
     var panda_number = Math.ceil(Math.random() * 10);
     var player_Number = parseInt(document.getElementById("Num").value);

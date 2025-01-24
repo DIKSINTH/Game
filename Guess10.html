@@ -4,14 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Play with Panda</title>
+    <!--Linked the CSS-->
     <link rel="stylesheet" href="Guess10.css">
+    <!--Linked the Font Styles-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fascinate&family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
   </head>
+  <!--Body Starts-->
   <body>
+    <!--Header-->
 <div id="header"><h1>Play with Panda</h1></div>
-<div id="header2"> <div id="Rules">
+<!--Header 2-->
+<div id="header2"> <div id="Description">
            <a id="Desc" href="Description.html">DESCRIPTION</a>
           </div>
           <div id="Name">
@@ -19,12 +24,14 @@
             type="text"
             placeholder="Enter your Name"
           /></div><div id="btn"><button id="Enter" onclick="start()">Enter</button></div></div>
+          <!--Main-->
          <div id="main">
           <h1>Guess the Number Between 1 to 10</h1>
           <div><input type="number" id="Num" placeholder="1-10"/><button style="background-color: #ffeb00;" onclick="back()">
             Check
           </button></div>
          </div>
+         <!--Play-Ground-->
           <div id="play-ground">
 <img id="vs" src="VS.png" alt="">
 <img id="human" src="human.png" alt="">
@@ -39,6 +46,7 @@
           <h1 id="remaining"></h1></div>
           </div>
         </div>
+        <!--Linked the Javascript File-->
         <script src="logic.js"></script>
       </body>
     </html>
