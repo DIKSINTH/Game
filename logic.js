@@ -71,7 +71,7 @@ class player {
           message.style.display = "none";
         }, 5000);
       }
-      const failSound = new Audio("fail.mp3");
+      const failSound = new Audio("Audios/fail.mp3");
       failSound.play();
       document.getElementById("player").style.display = "none";
       document.getElementById("player-number").style.display = "none";
@@ -107,7 +107,7 @@ class player {
         this.Name.includes(adaikala) ||
         this.Name.includes(shiny)
       ) {
-        const winSound = new Audio("minnale.mp3");
+        const winSound = new Audio("Audios/minnale.mp3");
         winSound.play();
         document.getElementById("ans").innerHTML = "Congratulations🥳";
         document.getElementById("player-panda").style.display = "none";
@@ -128,7 +128,7 @@ class player {
           }, 5000);
         }
       } else {
-        const winSound = new Audio("win.mp3");
+        const winSound = new Audio("Audios/win.mp3");
         winSound.play();
         document.getElementById("ans").innerHTML = "Congratulations🥳";
         document.getElementById("player-panda").style.display = "none";
