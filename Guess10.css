@@ -211,9 +211,6 @@ a:hover {
 }
 /*Media Query for Mobile Phones*/
 @media screen and (min-width: 360px) and (max-width: 480px) {
-  #header {
-    background-color: chartreuse;
-  }
   #player-panda {
     right: 12%;
     font-size: 1.5em;
