@@ -1,3 +1,12 @@
+window.onload = function () {
+  setTimeout(function () {
+    document.getElementById("alert_box").style.display = "block";
+  }, 1000);
+};
+
+function alertbox() {
+  document.getElementById("alert_box").style.display = "none";
+}
 let remaining_chances = 10;
 let Adaikala = "Adaikala";
 let Shiny = "Shiny";
@@ -84,6 +93,11 @@ class player {
       document.getElementById("rem").style.display = "none";
       document.getElementById("shine").style.display = "none";
       document.getElementById("remaining").style.display = "none";
+      if (true) {
+        setTimeout(() => {
+          location.reload();
+        }, 15000);
+      }
     } else if (player_Number > 10 || player_Number < 1) {
       document.getElementById("ans").innerHTML =
         "Enter the Number between 1 to 10";
@@ -127,6 +141,11 @@ class player {
             message.style.display = "none";
           }, 5000);
         }
+        if (true) {
+          setTimeout(() => {
+            location.reload();
+          }, 15000);
+        }
       } else {
         const winSound = new Audio("Audios/win.mp3");
         winSound.play();
@@ -147,6 +166,11 @@ class player {
           setTimeout(() => {
             message.style.display = "none";
           }, 5000);
+        }
+        if (true) {
+          setTimeout(() => {
+            location.reload();
+          }, 15000);
         }
       }
     } else if (player_Number != panda_number) {
