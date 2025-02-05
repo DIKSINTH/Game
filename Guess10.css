@@ -16,7 +16,6 @@ input[type="number"]::-webkit-outer-spin-button {
   display: none;
   top: 30%;
   left: 30%;
-  border: 2px solid black;
   z-index: 1000;
   border-radius: 20px;
   text-align: center;
@@ -24,7 +23,7 @@ input[type="number"]::-webkit-outer-spin-button {
 #important_notice {
   padding-top: 30px;
   font-family: "Jaro", serif;
-  font-optical-sizing: auto;
+  font-size: 40px;
   font-weight: 400;
   font-style: normal;
 }
@@ -228,6 +227,16 @@ a:hover {
 }
 /*Media Query for Tablets*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  #alert_box {
+    width: 50vh;
+    height: 53vh;
+    color: white;
+    top: 20%;
+    left: 29%;
+  }
+  #alert_message {
+    margin-left: 35px;
+  }
   #Desc {
     padding-left: 30%;
     font-family: Arial, Helvetica, sans-serif;
@@ -252,6 +261,26 @@ a:hover {
 }
 /*Media Query for Mobile Phones*/
 @media screen and (min-width: 360px) and (max-width: 480px) {
+  #alert_box {
+    width: 32vh;
+    height: 38vh;
+    top: 30%;
+    left: 20%;
+  }
+  #important_notice {
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 16px;
+    font-style: normal;
+  }
+  #alert_message {
+    padding-top: 12px;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  #d {
+    font-size: 16px;
+  }
   #player-panda {
     right: 12%;
     font-size: 1.5em;
