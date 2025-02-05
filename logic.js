@@ -96,7 +96,7 @@ class player {
       if (true) {
         setTimeout(() => {
           location.reload();
-        }, 15000);
+        }, 12000);
       }
     } else if (player_Number > 10 || player_Number < 1) {
       document.getElementById("ans").innerHTML =
@@ -144,7 +144,7 @@ class player {
         if (true) {
           setTimeout(() => {
             location.reload();
-          }, 15000);
+          }, 12000);
         }
       } else {
         const winSound = new Audio("Audios/win.mp3");
@@ -170,7 +170,7 @@ class player {
         if (true) {
           setTimeout(() => {
             location.reload();
-          }, 15000);
+          }, 12000);
         }
       }
     } else if (player_Number != panda_number) {
